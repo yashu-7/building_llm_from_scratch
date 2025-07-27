@@ -68,7 +68,7 @@ tqdm
 
 ## Usage
 
-*In stage-1 you haveyou have all the python codes related to data downloading and processing*
+## *In **stage-1** you haveyou have all the python codes related to data downloading and processing*
 
 **Step 1**: Data Estimation
 
