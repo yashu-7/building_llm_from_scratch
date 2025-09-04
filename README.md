@@ -25,7 +25,7 @@ The complete workflow is illustrated below, showing the progression from data pr
 ```
 **Stage 1: Data Preparation Pipeline**
 
-This stage contains a pipeline for preparing data for training an LLM. The pipeline consists of three main steps: estimating the number of samples needed for a dataset, downloading and chunking the dataset, and tokenizing the data using byte-pair encoding (BPE). The process is designed to handle large datasets efficiently.
+This stage contains a pipeline for preparing data for training an LLM. The pipeline consists of three main steps: estimating the number of samples needed for a dataset, downloading and chunking the dataset, and tokenizing the data using *byte-pair encoding (BPE)*. The process is designed to handle large datasets efficiently.
 Flowchart (Stage 1)
 ### The following flowchart illustrates the workflow of the scripts in this stage:
 ```
@@ -70,7 +70,7 @@ python 2_check_data.py
 **Output**: The dataset is saved to fineweb_10gb_dataset.
 **Step 3**: Tokenization
 **Script**: *3.2_byte_pair_tokenizer.py*
-Description: Tokenizes the dataset using byte-pair encoding (BPE) and saves the tokenized data as a numerical representation.
+**Description**: Tokenizes the dataset using byte-pair encoding (BPE) and saves the tokenized data as a numerical representation.
 How to Run:
 ```
 # To run the python file
@@ -92,7 +92,7 @@ This stage explores the core components of the Transformer architecture through 
 In this stage, the concepts from Stage 2 are integrated to build a full Transformer model.
 *architecture.ipynb*: This notebook provides a step-by-step implementation of the Transformer architecture, combining the multi-head attention mechanism and feed-forward neural networks. The Transformer is the foundation for most modern large language models.
 ## Stage 4: Training the Transformer
-The final stage focuses on training the implemented Transformer model on the dataset prepared in Stage 1.
+The final stage focuses on training the implemented Transformer model on the dataset prepared in **Stage 1**.
 *training.py*: This script contains the complete code for training the model. It handles data loading, model initialization, the training loop, and saving the final model weights.
 Prerequisites
 To run the scripts in this repository, you need the following:
@@ -100,6 +100,8 @@ Python 3.10+
 Required Libraries:
 ```
 datasets
+torch
+torchinfo
 tiktoken
 numpy
 psutil
@@ -113,14 +115,16 @@ huggingface-cli login
 Installation
 ```
 Clone the Repository:
-
-git clone <your-repo-url>
-cd <your-repo-name>
-
+```
+git clone https://github.com/yashu-7/building_llm_from_scratch.git
+cd https://github.com/yashu-7/building_llm_from_scratch.git
+```
 Install Dependencies:
 Create a requirements.txt file with the following content:
 ```
 datasets
+torch
+torchinfo
 tiktoken
 numpy
 psutil
