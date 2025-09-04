@@ -1,0 +1,7 @@
+datasets
+torch
+torchinfo
+tiktoken
+numpy
+psutil
+tqdm
